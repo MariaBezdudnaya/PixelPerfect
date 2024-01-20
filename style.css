@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    width: 72.33%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 37px 88px 43px 105px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 22px;
+    width: 142px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 29%;
+
+}
+
+.header-menu a{
+    text-decoration: none;
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-between;
+    width: 23.67%;
+}
+
+#sell {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+select {
+    margin-right: 39px;
+    border: none;
+
+}
+
+.placeholder {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+button {
+    padding: 17px 56px;
+    border-radius: 100px;
+    background: var(--3, linear-gradient(178deg, #FD749B -13.56%, #281AC8 158.3%));
+    color: #fff;
+    transition: 0.7s;
+}
+
+button:hover {
+    size: 110%;
+    border-radius: 0;
+    background: #5C5C5C;
+}
+
+select {
+    background-image: url('\img\header-list-bg.svg');
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Блок HERO */
+
+.hero {
+    background: url(img/background-hero.png);
+    background-size: cover;
+    height: 732px;
+}
+
+
+.hero-blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-info {
+    padding-top: 152px;
+    width: 415px;
+    color: #fff;
+}
+
+.hero-info-prew {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-info-last {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero-image {
+    margin-top: 28px;
+}
+
+/* Блок DISCOVER, PRODUCTS, ethToNaira */
+
+.discover-blocks, .products-blocks, .ethToNaira-blocks {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #333 2px solid;
+    border-radius: 30px;
+}
+
+.discover-blocks img, .products-blocks img, .ethToNaira-blocks img{
+    width: 100%;
+    border-radius: 30px;
+}
+
+.discover-text, .products-text, .ethToNaira-text {
+    text-align: center;
+    padding-top: 60px;
+    width: 870px;
+}
+.discover-text-title, .products-text-title, .ethToNaira-text-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px; /* 140.625% */
+    background: var(--3, linear-gradient(178deg, #FD749B -13.56%, #281AC8 158.3%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.discover-text-data, .products-text-data, .ethToNaira-text-data {
+    padding-top: 15px;
+    color: #333;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 17px; 
+}
+.discover-text-description, .products-text-description, .ethToNaira {
+    padding-top: 29px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.main-button {
+    padding-top: 46px;
+    margin-bottom: 39px;
+
+}
+
+/* Блок BUTTONS */
+
+.buttons-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 115px;
+    width: 25%;
+
+}
+
+.button {
+    margin-right: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 146px;
+    padding: 69px 51px 9px 80px;
+    background: #151515;
+    color:#fff;
+    
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-coinBase {
+    width: 369px;
+    margin-right: 170px;
+}
+
+.logo {
+    padding-bottom: 34.39px;
+}
+
+.footer-coinBase-text {
+    padding-bottom: 18px;
+    color: #A2A2A2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+
+.footer-coinBaseLinks, .footer-contactUs {
+    color: #A2A2A2;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-right: 63px;
+}
+
+.footer-coinBaseLinks h2, .footer-contactUs h2, .footer-coinBaseInstagram h2 {
+    font-weight: 400;
+    padding-bottom: 30px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.footer-contactUs {
+    line-height: 24px;
+}
+
+.coinBaseInstIcons{
+    width: 310px;
+}
+
+.footer-coinBaseLinks {
+    width: 170px;
+}
+
+.footer-contactUs{
+    width: 226px;
+}
+
+.footer-contactUs-app {
+    margin-top: 60px;
+}
+
+.footer-end {
+    padding-top: 44px;
+    color: #989898;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px; /* 200% */
+}
