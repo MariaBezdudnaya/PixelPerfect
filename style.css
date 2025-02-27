@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -8,20 +8,25 @@
 
 .wrapper {
     width: 72.33%;
-    margin: 0 auto;
+    margin: 60px auto 0;
+    background: linear-gradient(to right, #FD749B, #281AC8);
+    border-radius: 30px; /* Скругление углов */
+    padding: 1px; /* Толщина рамки */
 }
 
 header {
-    padding: 37px 88px 43px 105px;
     color: #333;
     font-size: 14px;
     font-weight: 700;
 }
 
 .header-container {
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 86.67vw;
+    height: 132px;
 }
 
 .logo img {
@@ -32,64 +37,139 @@ header {
 .header-menu {
     display: flex;
     justify-content: space-between;
-    width: 29%;
-
+    width: 28.4vw;
+}
+.header-menu div {
+    position: relative; /* Для позиционирования псевдоэлемента */
 }
 
-.header-menu a{
+.header-menu a {
     text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+}
+.header-menu_blog::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px; /* Толщина линии подчеркивания */
+    background-color: #FD749B; /* Цвет подчеркивания */
+    position: absolute;
+    bottom: -5px; /* Расположение линии под ссылкой */
+    left: 0;
 }
 
 .header-list {
+    width: 23.33vw;
     display: flex;
     justify-content: space-between;
-    width: 23.67%;
+    align-items: center;
 }
 
-#sell {
-    font-size: 14px;
-    font-weight: 700;
-}
-
-select {
-    margin-right: 39px;
-    border: none;
-
-}
-
-.placeholder {
-    font-size: 14px;
-    font-weight: 700;
-}
-
-button {
+.main-button {
     padding: 17px 56px;
     border-radius: 100px;
     background: var(--3, linear-gradient(178deg, #FD749B -13.56%, #281AC8 158.3%));
     color: #fff;
+    border: none;
+    font-weight: bold;
     transition: 0.7s;
 }
-
-button:hover {
+.main-button:hover {
     size: 110%;
     border-radius: 0;
     background: #5C5C5C;
 }
 
-select {
-    background-image: url('\img\header-list-bg.svg');
+/* SELECT */
+.select {
+    height: 100%;
+    position: relative;
+    
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.select__button {
+    position: relative;
+    display: block;
+    width: 190px;
+    background: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+}
+.select__button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-width: 10.4px 6px 0 6px;
+    border-color: #333 transparent transparent transparent;
+    border-style: solid;
+    pointer-events: none;
+}
+.select__list {
+    display: none; /* Скрываем список по умолчанию */
+    position: absolute;
+    left: 0;
+    top: 100%; /* Располагаем список под кнопкой */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #FFFFFF;
+    overflow: hidden;
+    border-radius: 6px;
+    width: 200px;
+    z-index: 1;
+} 
+.select--active .select__list { /* Показываем список, если у .select есть класс select--active */
+    display: block;
+}
+.select__list-item {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #E0E0E0;
+    border-bottom: 0px;
+    padding: 13px 20px;
+    background-color: #fff;
+    text-align: left;
     font-size: 12px;
-    font-weight: 400;
+    cursor: pointer;
+}
+.select__list-item:first-child {
+    border-radius: 6px 6px 0 0;
+}
+.select__list-item:last-child {
+    border-radius: 0 0 6px 6px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.select__list-item:hover,
+.select__list-item:focus {
+    background: linear-gradient(to bottom, #fd749bc7, #281ac8c1);
+    outline: 0;
+}
+.select__input-hidden {
+    display: none;
 }
 
 /* Блок HERO */
-
 .hero {
-    background: url(img/background-hero.png);
-    background-size: cover;
-    height: 732px;
+    position: relative;
+    height: 730px;
 }
-
+.hero-background img {
+    position: absolute;
+    height: 110%;
+    width: 100%;
+}
 
 .hero-blocks {
     display: flex;
@@ -113,29 +193,36 @@ h1 {
     font-weight: 700;
     margin-bottom: 20px;
 }
+
 .hero-info-last {
     font-size: 18px;
     font-weight: 400;
 }
 
+.hero-wrapper {
+    width: 72.33%;
+    margin: 0 auto;
+    position: relative;
+}
 .hero-image {
     margin-top: 28px;
 }
 
-/* Блок DISCOVER, PRODUCTS, ethToNaira */
-
-.discover-blocks, .products-blocks, .ethToNaira-blocks {
-    margin-top: 60px;
+/* Блоки DISCOVER, PRODUCTS, ethToNaira */
+.discover-blocks,
+.products-blocks,
+.ethToNaira-blocks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: #333 2px solid;
-    border-radius: 30px;
+    background: white; /* Цвет фона внутри рамки */
+    border-radius: 29px; /* Скругление углов внутреннего блока */
 }
 
 .discover-blocks img, .products-blocks img, .ethToNaira-blocks img{
-    width: 100%;
-    border-radius: 30px;
+    width: 100.5%;
+    margin-top: -2.5px;
+    border-radius: 30px 30px 0 0 ;
 }
 
 .discover-text, .products-text, .ethToNaira-text {
@@ -168,21 +255,18 @@ h1 {
     line-height: 28px;
 }
 
-.main-button {
+.main-button_container {
     padding-top: 46px;
     margin-bottom: 39px;
-
 }
 
 /* Блок BUTTONS */
-
 .buttons-container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding-top: 115px;
     width: 25%;
-
 }
 
 .button {

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelPerfect</title>
+    <link type="image/x-icon" href="/img/favicon.png" rel="shortcut icon">
+    <title>CoinBase</title>
     <link rel="stylesheet" href="style.css">
+    <script async src="main.js"></script>
 </head>
 <body>
     <header>
@@ -20,21 +22,29 @@
                 <div class="header-menu_contact"><a href="">Contact Us</a></div>
             </div>
             <div class="header-list">
-                <select name="sell" id="sell">
-                    <option value="placeholder" class="placeholder">Sell Bitcoin/ Giftcard</option>
-                    <option value="bitcoin">Sell Bitcoin</option>
-                    <option value="giftcard">Sell Giftcard</option>
-                </select>
+                <div class="select">
+                    <button class="select__button">Sell Bitcoin/ Giftcard</button>
+                    <div class="select__list">
+                    <button class="select__list-item" 
+                        data-value="lessons">Sell Bitcoin</button>
+                    <button class="select__list-item" 
+                        data-value="diary">Sell Giftcard</button>
+                    </div>
+                    <input type="text" name="select-category" value="" class="select__input-hidden">
+                </div>
+
                 <div class="header-button">
-                    <button>LOGIN</button>
+                    <button class="main-button">LOGIN</button>
                 </div>
             </div>
-
         </div>
     </header>
     <main>
         <section class="hero">
-            <div class="wrapper">
+            <div class="hero-background">
+                <img src="img/background-hero.png" alt="hero-background">
+            </div>
+            <div class="hero-wrapper">
                 <div class="hero-blocks">
                     <div class="hero-info">
                         <p class="hero-info-prew">HOME/BLOG</p>
@@ -51,14 +61,14 @@
         <div class="discover">
             <div class="wrapper">
                 <div class="discover-blocks">
-                        <img src="img/discover-image.png" alt="discover-image">
+                    <img src="img/discover-image.png" alt="discover-image">
                     <div class="discover-text">
                         <p class="discover-text-title">HOW TO SELL YOUR ITUNES GIFTCARD WITH US .</p>
                         <p class="discover-text-data">19 JUNE, 2019  |  BUSINESS</p>
                         <p class="discover-text-description">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea verterem persecuti cu est, sea epicuri.</p>
                     </div>
-                    <div class="main-button">
-                        <button>DISCOVER</button>
+                    <div class="main-button_container">
+                        <button class="main-button">DISCOVER</button>
                     </div>
                 </div>
             </div>
@@ -73,8 +83,8 @@
                         <p class="products-text-data">19 JUNE, 2019  |  BUSINESS</p>
                         <p class="products-text-description">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea verterem persecuti cu est, sea epicuri.</p>
                     </div>
-                    <div class="main-button">
-                        <button>DISCOVER</button>
+                    <div class="main-button_container">
+                        <button class="main-button">DISCOVER</button>
                     </div>                    
                 </div>
             </div>
@@ -89,8 +99,8 @@
                         <p class="ethToNaira-text-data">19 JUNE, 2019  |  BUSINESS</p>
                         <p class="ethToNaira-text-description">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea verterem persecuti cu est, sea epicuri.</p>
                     </div>
-                    <div class="main-button">
-                        <button>DISCOVER</button>
+                    <div class="main-button_container">
+                        <button class="main-button">DISCOVER</button>
                     </div>                    
                 </div>
             </div>
@@ -138,14 +148,14 @@
             <div class="footer-coinBaseInstagram">
                 <h2>CoinBase Instagram</h2>
                 <div class="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
                     <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons+">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
-                    <img src="img/coinBaseInstIcons+.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
+                    <img src="img/coinBaseInstIcons.png" alt="coinBaseInstIcons">
                 </div>
             </div>   
         </div>
